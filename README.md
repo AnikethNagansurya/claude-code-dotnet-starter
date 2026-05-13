@@ -6,7 +6,7 @@ Stop re-explaining your stack to an AI that forgets everything between sessions.
 
 One installer. One onboarding command. Permanent, project-aware AI that gets smarter every sprint.
 
-[![CI](https://github.com/YOUR-USERNAME/claude-code-dotnet-starter/actions/workflows/ci.yml/badge.svg)](https://github.com/YOUR-USERNAME/claude-code-dotnet-starter/actions/workflows/ci.yml)
+[![CI](https://github.com/AnikethNagansurya/claude-code-dotnet-starter/actions/workflows/ci.yml/badge.svg)](https://github.com/YOUR-USERNAME/claude-code-dotnet-starter/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![.NET](https://img.shields.io/badge/.NET-Core%2B-512BD4)](https://dotnet.microsoft.com)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
