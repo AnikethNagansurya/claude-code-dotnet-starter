@@ -1,5 +1,5 @@
 # session-end.ps1 - runs at Claude Code Stop. Three jobs:
-#   1. Trim session-log.md to the last 10 entries (prevents context bloat).
+#   1. Trim session-log.md to the last 3 entries (prevents context bloat).
 #   2. Trim lessons.md to the most recent 20 bullets across all sections
 #      (curator inserts at top of each section, so first 20 = newest).
 #      Section headers, prose, and blank lines preserved.
@@ -10,10 +10,10 @@
 $ErrorActionPreference = 'SilentlyContinue'
 $claudeDir = Split-Path $PSScriptRoot -Parent
 
-# Job 1: trim session-log.md to last 10 entries
+# Job 1: trim session-log.md to last 3 entries
 $log = Join-Path $claudeDir 'session-log.md'
 if (Test-Path $log) {
-    $keep = 10
+    $keep = 3
     $count = 0
     $out = New-Object System.Collections.Generic.List[string]
     foreach ($line in Get-Content $log) {
