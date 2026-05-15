@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # session-end.sh — runs at Claude Code Stop. Three jobs:
-#   1. Trim session-log.md to the last 10 entries (prevents context bloat).
+#   1. Trim session-log.md to the last 3 entries (prevents context bloat).
 #   2. Trim lessons.md to the most recent 20 bullets across all sections
 #      (curator inserts at top of each section, so first 20 = newest).
 #      Section headers, prose, and blank lines preserved.
@@ -10,11 +10,11 @@
 
 CLAUDE_DIR="$(cd "$(dirname "$0")/.." && pwd)"
 
-# Job 1: trim session-log.md to last 10 entries
+# Job 1: trim session-log.md to last 3 entries
 LOG="$CLAUDE_DIR/session-log.md"
 if [[ -f "$LOG" ]]; then
     awk '
-        BEGIN { keep = 10; count = 0 }
+        BEGIN { keep = 3; count = 0 }
         /^## / { count++; if (count > keep) exit }
         { print }
     ' "$LOG" > "$LOG.tmp" && mv "$LOG.tmp" "$LOG"
